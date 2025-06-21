@@ -18,7 +18,7 @@ for i in range(10):
     newenemy.rectangle.centery = 10
     allenemies.append(newenemy)
 
-last_move_time = pygame.time.get_ticks()
+# last_move_time = pygame.time.get_ticks()
 # move ship to center
 
 ship.myship.rectangle.centerx = 200
@@ -62,10 +62,5 @@ while True:
     # lets draw all the 10 enemies
     for enemy in allenemies:
         screan.blit(enemy.image, enemy.rectangle)
-
-    if current_time - last_move_time > 1000:
-        for enemy in allenemies:
-            enemy.rectangle.centery += 10
-        last_move_time = current_time
 
     pygame.display.flip()
